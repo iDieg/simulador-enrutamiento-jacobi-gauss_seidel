@@ -40,10 +40,10 @@ Asegúrese de tener el servidor local en ejecución (`python app.py`) en el puer
 import requests
 import json
 
-# 1. Definimos la URL de nuestra API local
+# Se define la URL de nuestra API local
 URL_API = "http://localhost:5000/api/simular"
 
-# 2. Preparamos el escenario de red (Ejemplo: Topología de 3 routers)
+# Preparamos el escenario de red con un ejemplo de 3 routers
 payload = {
     "matriz_A": [
         [1.0, -0.2, 0.0],
@@ -55,10 +55,10 @@ payload = {
     "capacidad_max": 400          # Límite de hardware por nodo
 }
 
-# 3. Realizamos la petición POST al servidor
+# Se realiza petición POST al servidor
 respuesta = requests.post(URL_API, json=payload)
 
-# 4. Procesamos la respuesta del servidor
+# Respuesta del servidor
 if respuesta.status_code == 200:
     datos = respuesta.json()
     print("✅ Simulación exitosa.\n")
