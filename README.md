@@ -6,7 +6,7 @@
 ---
 
 ## Descripción del Proyecto
-Este programa es un simulador computacional diseñado para predecir y analizar el tráfico de datos entre routers en una topología de red. Para resolver la distribución de las cargas, el simulador modela la red como un simulador de ecuaciones lineales y lo resuelve mediante el **Método Numérico de Jacobi**. 
+Este programa es un simulador computacional diseñado para predecir y analizar el tráfico de datos entre routers en una topología de red. Para resolver la distribución de las cargas, el simulador modela la red como un sistema de ecuaciones lineales y lo resuelve mediante el **Método Numérico de Jacobi**. 
 
 Adicionalmente, el software integra el método de **Gauss-Seidel** para fines de validación matemática y análisis comparativo de la eficiencia algorítmica. El simulador solicita al usuario la topología (matriz de distribución), el tráfico externo (Internet) y la capacidad máxima, devolviendo un diagnóstico preciso del estado de la red e imprimiendo el desarrollo paso a paso para fines académicos.
 
