@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
 import numpy as np
 from analizador_enrutamiento_jacobi import resultados_web
 
@@ -11,6 +12,8 @@ app = Flask(
     static_folder=BASE_DIR,
     static_url_path='/static'
 )
+
+CORS(app)  # Permitir solicitudes desde otros dominios
 
 @app.route('/')
 def index():
