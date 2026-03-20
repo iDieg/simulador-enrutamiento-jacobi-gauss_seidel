@@ -1,4 +1,11 @@
-    #contenidoMatematico {
-        overflow-x: auto;
-        white-space: nowrap;
-    }
+#contenidoMatematico {
+   overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Estilo para mensaje de error de tolerancia y capacidad maxima */
+#error_tolerancia, #error_capacidad {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
