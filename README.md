@@ -1,12 +1,16 @@
 # Simulador de Análisis de Tráfico y Enrutamiento
 
-**Versión:** 1.0  
+**Versión:** 2.0
 **Autores:** Diego Romero, Tatiana Chavez, Alejandra González, Ricardo Herrera  
 
 ---
+## Actualización
+
+* Interfaz gráfica interactiva, interfaz desarrollada en HTML/CSS/JS que permite al usuario configurar topologías de red dinámicamente mediante formularios visuales.
+* El desarrollo matemático paso a paso (tanto de Jacobi como de Gauss-Seidel) ahora se empaqueta y se renderiza directamente en el navegador del usuario como una consola virtual.
 
 ## Descripción del Proyecto
-Este programa es un simulador computacional diseñado para predecir y analizar el tráfico de datos entre routers en una topología de red. Para resolver la distribución de las cargas, el simulador modela la red como un sistema de ecuaciones lineales y lo resuelve mediante el **Método Numérico de Jacobi**. 
+Este programa, WebApp es un simulador computacional diseñado para predecir y analizar el tráfico de datos entre routers en una topología de red. Para resolver la distribución de las cargas, el simulador modela la red como un sistema de ecuaciones lineales y lo resuelve mediante el **Método Numérico de Jacobi**. 
 
 Adicionalmente, el software integra el método de **Gauss-Seidel** para fines de validación matemática y análisis comparativo de la eficiencia algorítmica. El simulador solicita al usuario la topología (matriz de distribución), el tráfico externo (Internet) y la capacidad máxima, devolviendo un diagnóstico preciso del estado de la red e imprimiendo el desarrollo paso a paso para fines académicos.
 
