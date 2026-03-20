@@ -71,7 +71,7 @@
             // En caso de no ser dominante, mostrar mensaje y no intentar renderizar pasos
             console.log(data.mensaje_dominancia);
             console.log(data.reporte_diagnostico);
-            if (data.mensaje_dominancia && data.mensaje_dominancia.includes("no es diagonalmente dominante")) {
+            if (data.mensaje_dominancia && data.mensaje_dominancia.includes("NO es diagonalmente dominante.")) {
                 mostrarResultados(data); // Aún mostramos el diagnóstico
                 document.getElementById('contenidoMatematico').innerHTML = "<p class='text-danger'>El sistema no es diagonalmente dominante. No se pueden garantizar resultados correctos con Jacobi o Gauss-Seidel.</p>";
                 return;
