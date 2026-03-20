@@ -11,15 +11,28 @@
         contenedorTrafico.innerHTML = '';
 
         // Se verifica que la tolerancia y capacidad máxima sean positivas
-        const tol = parseFloat(document.getElementById('tolerancia').value);
-        const capacidad_max = parseFloat(document.getElementById('capacidad').value);
+        const routersInput = document.getElementById('cantidad_routers');
+        const tolInput = document.getElementById('tolerancia');
+        const capInput = document.getElementById('capacidad');
 
-        if (isNaN(tol) || tol <= 0) {
-            document.getElementById('tolerancia_error').innerText = "Por favor, ingresa una tolerancia positiva.";
+        const errorRouters = document.getElementById('routers_error');
+        const errorTol = document.getElementById('tolerancia_error');
+        const errorCap = document.getElementById('capacidad_error');
+
+        errorRouters.innerText = '';
+        errorTol.innerText = '';
+        errorCap.innerText = '';
+
+        if (isNaN(routersInput.value) || n_actual < 2) {
+            errorRouters.innerText = 'Por favor, ingrese la cantidad mínima de routers (2 o más).';
             return;
         }
-        if (isNaN(capacidad_max) || capacidad_max <= 0) {
-            document.getElementById('capacidad_error').innerText = "Por favor, ingresa una capacidad máxima positiva.";
+        if (isNaN(tolInput.value) || parseFloat(tolInput.value) <= 0 || parseFloat(tolInput.value) >= 1) {
+            errorTol.innerText = 'Por favor, ingrese una tolerancia positiva o menor que 1.';
+            return;
+        }
+        if (isNaN(capInput.value) || parseFloat(capInput.value) <= 0) {
+            errorCap.innerText = 'Por favor, ingrese una capacidad máxima positiva.';
             return;
         }
 
