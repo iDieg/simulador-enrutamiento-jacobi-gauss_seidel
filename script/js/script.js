@@ -67,6 +67,13 @@
                 alert("Error en el servidor: " + data.error);
                 return;
             }
+
+            // En caso de no ser dominante, mostrar mensaje y no intentar renderizar pasos
+            if (data.mensaje_dominancia && data.mensaje_dominancia.includes("no es diagonalmente dominante")) {
+                mostrarResultados(data); // Aún mostramos el diagnóstico
+                document.getElementById('contenidoMatematico').innerHTML = "<p class='text-danger'>El sistema no es diagonalmente dominante. No se pueden garantizar resultados correctos con Jacobi o Gauss-Seidel.</p>";
+                return;
+            }
         
             mostrarResultados(data);
             pasosGlobales.jacobi = data.pasos_jacobi || []; // Guardamos los pasos
