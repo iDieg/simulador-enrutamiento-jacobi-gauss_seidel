@@ -23,7 +23,7 @@
         errorTol.innerText = '';
         errorCap.innerText = '';
 
-        if (isNaN(routersInput.value) || n_actual < 2) {
+        if (isNaN(routersInput.value) || parseInt(routersInput.value) < 2) {
             errorRouters.innerText = 'Por favor, ingrese la cantidad mínima de routers (2 o más).';
             return;
         }
