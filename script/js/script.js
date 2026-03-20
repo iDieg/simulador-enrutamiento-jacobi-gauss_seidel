@@ -56,7 +56,7 @@
 
         // Enviar a Flask
         try {
-            const response = await fetch('https://simulador-enrutamiento-jacobi-gauss.onrender.com/api/simular', {
+            const response = await fetch('https://simulador-enrutamiento-jacobi-gauss.onrender.com/api/calcular', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
