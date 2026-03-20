@@ -1,22 +1,21 @@
 import os
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, send_from_directory
 import numpy as np
 from analizador_enrutamiento_jacobi import resultados_web
 
+# Funcion para configurar la ruta base del proyecto, asegurando que Flask pueda servir los archivos estáticos correctamente
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-TEMPLATE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'templates'))
 
 app = Flask(
     __name__,
-    template_folder=TEMPLATE_DIR,
     static_folder=BASE_DIR,
     static_url_path='/static'
 )
 
 @app.route('/')
 def index():
-    # Flask buscará automáticamente en la carpeta /templates
-    return render_template('index.html')
+    # Se busca el archivo index.html en la raíz del proyecto
+    return send_from_directory(BASE_DIR, 'index.html')
 
 @app.route('/api/calcular', methods=['POST'])
 def calcular():
