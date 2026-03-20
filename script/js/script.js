@@ -10,6 +10,19 @@
         contenedorEnlaces.innerHTML = '';
         contenedorTrafico.innerHTML = '';
 
+        // Se verifica que la tolerancia y capacidad máxima sean positivas
+        const tol = parseFloat(document.getElementById('tolerancia').value);
+        const capacidad_max = parseFloat(document.getElementById('capacidad').value);
+
+        if (isNaN(tol) || tol <= 0) {
+            document.getElementById('tolerancia_error').innerText = "Por favor, ingresa una tolerancia positiva.";
+            return;
+        }
+        if (isNaN(capacidad_max) || capacidad_max <= 0) {
+            document.getElementById('capacidad_error').innerText = "Por favor, ingresa una capacidad máxima positiva.";
+            return;
+        }
+
         for (let i = 0; i < n_actual; i++) {
             let rowHTML = `<div class="row mb-2 align-items-center"><div class="col-2 fw-bold">Al Router ${i+1}:</div>`;
             for (let j = 0; j < n_actual; j++) {
@@ -68,9 +81,6 @@
                 return;
             }
 
-            // En caso de no ser dominante, mostrar mensaje y no intentar renderizar pasos
-            console.log(data.mensaje_dominancia);
-            console.log(data.reporte_diagnostico);
             if (data.mensaje_dominancia && data.mensaje_dominancia.includes("NO es diagonalmente dominante.")) {
                 console.log("funcionando");
                 document.getElementById('resultados_container').classList.remove('d-none');
