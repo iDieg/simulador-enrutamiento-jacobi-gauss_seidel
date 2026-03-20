@@ -11,7 +11,7 @@
         contenedorTrafico.innerHTML = '';
 
         // Se verifica que la tolerancia y capacidad máxima sean positivas
-        const routersInput = document.getElementById('cantidad_routers');
+        const routersInput = document.getElementById('n_routers');
         const tolInput = document.getElementById('tolerancia');
         const capInput = document.getElementById('capacidad');
 
