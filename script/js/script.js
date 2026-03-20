@@ -73,7 +73,7 @@
             console.log(data.reporte_diagnostico);
             if (data.mensaje_dominancia && data.mensaje_dominancia.includes("NO es diagonalmente dominante.")) {
                 console.log("funcionando");
-                document.getElementById('resultados_container').classList.add('d-none');
+                document.getElementById('resultados_container').classList.remove('d-none');
                 document.getElementById('mensaje_dominancia').innerText = data.mensaje_dominancia;
                 document.getElementById('eficiencia_texto').innerText = "";
                 document.getElementById('tabla_resultados').innerHTML = "";
