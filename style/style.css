@@ -3,9 +3,12 @@
     white-space: nowrap;
 }
 
-/* Estilo para mensaje de error de tolerancia y capacidad maxima */
-#error_tolerancia, #error_capacidad {
-    color: red;
+/* Estilo para mensaje de error*/
+.mensaje-error {
+    color: #dc3545;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 0.85rem;
+    display: block; 
+    margin-top: 4px;
+    min-height: 20px;
 }
