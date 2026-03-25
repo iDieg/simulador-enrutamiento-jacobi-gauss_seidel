@@ -37,9 +37,9 @@
         }
 
         for (let i = 0; i < n_actual; i++) {
-            let randomNumber = Math.floor(Math.random() * 98 + 1);
             let rowHTML = `<div class="row mb-2 align-items-center"><div class="col-2 fw-bold">Al Router ${i+1}:</div>`;
             for (let j = 0; j < n_actual; j++) {
+                let randomNumber = Math.floor(Math.random() * 98 + 1);
                 if (i !== j) {
                     rowHTML += `
                     <div class="col">
