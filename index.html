@@ -71,6 +71,33 @@
 </button>
 </div>
 
+<!-- Boton centrado para abrir la guía de uso en un modal -->
+<div class="text-center mt-4">
+    <button id="guiaBtn" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#guiaModal">❓ Guía de Uso</button>
+</div>
+<div class="modal fade" id="guiaModal" tabindex="-1" aria-labelledby="guiaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="guiaModalLabel">Guía de Uso del Simulador</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6>1. Configuración Inicial</h6>
+                <p>Ingrese la cantidad de routers en la red, la tolerancia para la convergencia y la capacidad máxima de los enlaces.</p>
+                <h6>2. Generar Topología</h6>
+                <p>Haga clic en "Generar Topología" para crear los campos de entrada para definir el tráfico entre routers y el tráfico externo.</p>
+                <h6>3. Ingreso correcto de Datos</h6>
+                <p>Ingrese valores válidos para todos los campos antes de ejecutar el diagnóstico, importante asegurarse que la matriz sea diagonalmente dominante (La suma de los porcentajes ingresados de una fila de la matriz debe ser menor que la diagonal principal, en este caso 100%).</p>
+                <h6>4. Ejecutar Diagnóstico</h6>
+                <p>Después de ingresar los datos, haga clic en "Ejecutar Diagnóstico" para ver los resultados del análisis de tráfico y enrutamiento.</p>
+                <h6>5. Ver Procedimiento Detallado</h6>
+                <p>Utilice el botón "Ver Procedimiento Detallado" para revisar los pasos matemáticos detrás de los métodos de Jacobi y Gauss-Seidel.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="menuProcedimiento">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title">Procedimiento Matemático</h5>
