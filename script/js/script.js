@@ -1,5 +1,6 @@
     let n_actual = 0;
     let pasosGlobales = { jacobi: [], gauss: [] };
+    let randomNumber = Math.floor(Math.random() * 98 + 1);
 
     // Genera las casillas de input dependiendo de la cantidad de routers
     function generarCampos() {
@@ -37,7 +38,7 @@
         }
 
         for (let i = 0; i < n_actual; i++) {
-            let rowHTML = `<div class="row mb-2 align-items-center"><div class="col-2 fw-bold">Al Router ${i+1}:</div>`;
+            let rowHTML = `<div class="row mb-2 align-items-center"><div class="col-2 fw-bold">Al Router ${i+1} (Ej. ${randomNumber}):</div>`;
             for (let j = 0; j < n_actual; j++) {
                 if (i !== j) {
                     rowHTML += `
@@ -45,7 +46,7 @@
                         <input type="number" class="form-control enlace-input" data-i="${i}" data-j="${j}" placeholder="Desde R${j+1} (%)" min="0" max="100">
                     </div>`;
                 } else {
-                    rowHTML += `<div class="col text-center text-muted">--</div>`;
+                    rowHTML += `<div class="col text-center text-muted">100</div>`;
                 }
             }
             rowHTML += `</div>`;
