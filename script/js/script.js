@@ -35,11 +35,21 @@
             errorCap.innerText = 'Por favor, ingrese una capacidad máxima positiva.';
             return;
         }
-
+        
         for (let i = 0; i < n_actual; i++) {
             let rowHTML = `<div class="row mb-2 align-items-center"><div class="col-2 fw-bold">Al Router ${i+1}:</div>`;
             for (let j = 0; j < n_actual; j++) {
                 let randomNumber = Math.floor(Math.random() * 98 + 1);
+                // Verificar que la suma de filas del ejemplo randomizado sea menor a 100
+                let sumaFila = 0;
+                for (let k = 0; k < n_actual; k++) {
+                    if (k !== i) {
+                        sumaFila += randomNumber;
+                    }
+                }
+                if (sumaFila >= 100) {
+                    randomNumber = Math.abs(Math.floor((100 - (n_actual - 1) * randomNumber) / (n_actual - 1)));
+                }
                 if (i !== j) {
                     rowHTML += `
                     <div class="col">
